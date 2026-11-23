@@ -12,3 +12,5 @@ Visitor -> CloudFront -> S3 bucket
 
 ## Status
 In progress. Waiting for AWS account activation.# AWS S3 Static Website
+
+Author : Yusuf Ayodeji
