@@ -1,45 +1,60 @@
+cd ~/aws-s3-static-website
+cat > index.html << 'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name | Cloud Portfolio</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; color: #222; }
-    header { background: #232f3e; color: white; padding: 40px 20px; text-align: center; }
-    header h1 { margin: 0 0 8px; }
-    header p { margin: 0; color: #ff9900; }
-    main { max-width: 700px; margin: 30px auto; padding: 0 20px; }
-    section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
-    h2 { margin-top: 0; color: #232f3e; }
-    footer { text-align: center; padding: 20px; color: #666; font-size: 14px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yusuf Ayodeji | Cloud Portfolio</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; margin: 0; background: #1e1f22; color: #e6e6e6; line-height: 1.6; }
+  header { background: #141517; padding: 48px 20px; text-align: center; }
+  header h1 { margin: 0 0 8px; font-size: 32px; color: #fff; }
+  header p { margin: 0 0 16px; color: #ff9900; }
+  .badge { display: inline-block; background: #2d2f33; font-size: 13px; padding: 4px 12px; border-radius: 14px; margin: 4px; }
+  main { max-width: 800px; margin: 0 auto; padding: 24px 20px; }
+  section { margin-bottom: 32px; }
+  h2 { color: #f2f2f2; border-bottom: 2px solid #ff9900; padding-bottom: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: #2a2c30; border: 1px solid #3a3d42; border-radius: 8px; padding: 16px; }
+  .card h3 { margin: 0 0 4px; font-size: 17px; color: #f2f2f2; }
+  .card p { margin: 0 0 10px; font-size: 14px; color: #b5b8bd; }
+  .card a { color: #ffb84d; font-weight: bold; text-decoration: none; }
+  .status { font-size: 13px; color: #9a9da3; }
+  .links a { display: inline-block; background: #ff9900; color: #141517; font-weight: bold; padding: 10px 20px; border-radius: 6px; text-decoration: none; margin: 0 8px 8px 0; }
+  footer { text-align: center; padding: 20px; color: #9a9da3; font-size: 14px; }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>AWS Cloud Practitioner | Aspiring Solutions Architect</p>
-  </header>
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>I am learning to design secure and reliable systems on AWS. This page is hosted on Amazon S3 as part of my first project.</p>
-    </section>
-    <section>
-      <h2>My AWS Projects</h2>
-      <ul>
-        <li>Project 1: Static website on S3 and CloudFront</li>
-        <li>Project 2: EC2 web server in a custom VPC</li>
-        <li>Project 3: Serverless contact form</li>
-        <li>Project 4: Highly available web app</li>
-        <li>Project 5: Infrastructure as code with monitoring</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Contact</h2>
-      <p>Find me on LinkedIn and GitHub.</p>
-    </section>
-  </main>
-  <footer>Built on AWS</footer>
+<header>
+  <h1>Yusuf Ayodeji</h1>
+  <p>Cloud engineer in training</p>
+  <span class="badge">AWS Cloud Practitioner</span>
+  <span class="badge">Solutions Architect path</span>
+</header>
+<main>
+  <section>
+    <h2>About me</h2>
+    <p>I am learning to design secure and reliable systems on AWS. I build hands-on projects and document each one on GitHub.</p>
+  </section>
+  <section>
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card"><h3>1. Static website</h3><p>A portfolio page hosted on S3 and delivered through CloudFront.</p><a href="https://github.com/https://github.com/ayotunde725/aws-s3-static-website">View on GitHub</a></div>
+      <div class="card"><h3>2. EC2 in a custom VPC</h3><p>A web server inside my own private network.</p><span class="status">Coming soon</span></div>
+      <div class="card"><h3>3. Serverless contact form</h3><p>API Gateway, Lambda, and DynamoDB.</p><span class="status">Coming soon</span></div>
+      <div class="card"><h3>4. Highly available app</h3><p>Load balancer, Auto Scaling, and RDS across two zones.</p><span class="status">Coming soon</span></div>
+      <div class="card"><h3>5. Infrastructure as code</h3><p>CloudFormation, a pipeline, and CloudWatch monitoring.</p><span class="status">Coming soon</span></div>
+    </div>
+  </section>
+  <section class="links">
+    <h2>Contact</h2>
+    <a href="https://www.linkedin.com/in/dr-yusuf-ayotunde-ayodeji/">LinkedIn</a>
+    <a href="https://github.com/https://github.com/ayotunde725">GitHub</a>
+  </section>
+</main>
+<footer>Built on AWS</footer>
 </body>
 </html>
+EOF
